@@ -1,0 +1,15 @@
+services:
+  db:
+    container_name: goCrud
+    image: postgres:13
+    environment:
+      POSTGRES_USER: medhashis
+      POSTGRES_PASSWORD: postgresGoCrud
+      POSTGRES_DB: postgresGoCrud
+    ports:
+      - "5432:5432"
+    volumes:
+      - goCrud-data:/var/lib/postgresql/data
+
+volumes:
+  goCrud-data:
